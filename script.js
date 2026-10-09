@@ -10,7 +10,7 @@ const durationTimeEl = document.getElementById('durationTime');
 
 // لائحة الأغاني الجاهزة من مجلد assets
 const playlist = [
-    { title: "B.M.S", src: "https://files.catbox.moe/n3bdw2.mp3" },
+    { title: "Colore Cramilo", src: "https://files.catbox.moe/n3bdw2.mp3" },
     // تقدر تزيد أغاني أخرين هنا بحال هكا:
     // { title: "Track Name 2", src: "assets/song2.mp3" }
 ];
