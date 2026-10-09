@@ -234,23 +234,24 @@ body {
 .player-controls button {
     background: none;
     border: none;
-    color: #94a3b8;
+    color: #ffffff !important;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 2px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 .player-controls button:hover {
-    color: #ffffff;
+    color: #3b82f6;
 }
 
 #playBtn {
-    font-size: 1.2rem;
-    color: #3b82f6;
+    font-size: 1.3rem;
+    color: #3b82f6 !important;
 }
 
 .progress-container {
