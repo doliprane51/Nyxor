@@ -10,7 +10,7 @@ const durationTimeEl = document.getElementById('durationTime');
 
 // لائحة الأغاني الجاهزة من مجلد assets
 const playlist = [
-    { title: "B.M.S", src: "assets/music.mp3" },
+    { title: "B.M.S", src: "https://open.spotify.com/track/0tqOrNifmUgu2xgbKesHk3?si=cBNtkN2aRtS6cX_kHRISsw&utm_source=copy-link" },
     // تقدر تزيد أغاني أخرين هنا بحال هكا:
     // { title: "Track Name 2", src: "assets/song2.mp3" }
 ];
