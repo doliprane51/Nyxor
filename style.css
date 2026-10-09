@@ -184,6 +184,7 @@ body {
     color: #60a5fa;
 }
 
+/* Music Box & Controls Fixes */
 .music-box {
     grid-column: span 2;
     display: flex;
@@ -228,21 +229,24 @@ body {
 .player-controls {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
 }
 
 .player-controls button {
-    background: none;
+    background: transparent;
     border: none;
-    color: #94a3b8;
+    color: #ffffff !important;
     cursor: pointer;
     font-size: 1.1rem;
-    padding: 0;
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #playBtn {
-    font-size: 1.3rem;
-    color: #3b82f6;
+    color: #3b82f6 !important;
+    font-size: 1.3rem !important;
 }
 
 .progress-container {
@@ -273,6 +277,7 @@ body {
     border-radius: 2px;
 }
 
+/* Social Boxes */
 .social-box {
     align-items: center;
     text-align: center;
