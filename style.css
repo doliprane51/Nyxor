@@ -228,33 +228,29 @@ body {
 .player-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
 }
 
 .player-controls button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff !important;
+    background: none;
+    border: none;
+    color: #94a3b8;
     cursor: pointer;
-    font-size: 0.9rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: inline-flex;
+    font-size: 1rem;
+    padding: 2px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .player-controls button:hover {
-    background: rgba(59, 130, 246, 0.3);
-    border-color: #3b82f6;
+    color: #ffffff;
 }
 
 #playBtn {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: rgba(59, 130, 246, 0.5);
-    color: #60a5fa !important;
+    font-size: 1.2rem;
+    color: #3b82f6;
 }
 
 .progress-container {
