@@ -14,7 +14,7 @@
         <!-- Profile Bento Box -->
         <div class="bento-card profile-box">
             <div class="avatar-wrapper">
-                <img src="assets/avatar.webp" alt="Nyxor" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60'">
+                <img src="assets/avatar.jpg" alt="Nyxor">
                 <div class="status-dot"></div>
             </div>
             <h1>Nyxor.</h1>
@@ -33,31 +33,29 @@
             <p>I do not know if I will reach my dream, but I am moving forward, trusting in God_</p>
         </div>
 
-        <!-- Secondary Link Box (@es.monaim_7) -->
+        <!-- Secondary Link Box (@es.monaim_7 - Instagram) -->
         <a href="https://instagram.com/es.monaim_7" target="_blank" class="bento-card link-box">
             <div class="link-avatar">
-                <img src="assets/avatar.webp" alt="Monaim" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60'">
+                <i class="fa-brands fa-instagram ig-icon-box"></i>
             </div>
             <div class="link-info">
                 <span class="handle">@es.monaim_7</span>
-                <span class="sub">Nyxor</span>
+                <span class="sub">Instagram</span>
             </div>
             <i class="fa-solid fa-arrow-right arrow-icon"></i>
         </a>
 
-        <!-- Music Player Box with Upload Feature -->
+        <!-- Music Player Box with Playlist & Preloaded Songs -->
         <div class="bento-card music-box">
-            <div class="album-art" id="albumArtContainer" title="اضغط لرفع أغنية جديدة">
+            <div class="album-art" id="albumArtContainer">
                 <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=300&auto=format&fit=crop&q=60" alt="Album Art">
-                <div class="upload-overlay">
-                    <i class="fa-solid fa-upload"></i>
-                </div>
             </div>
             <div class="music-info">
-                <span class="song-title" id="songTitle">اختر أغنية للتشغيل (اضغط على الصورة)</span>
+                <span class="song-title" id="songTitle">Loading Song...</span>
                 <div class="player-controls">
+                    <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
                     <button id="playBtn"><i class="fa-solid fa-play"></i></button>
-                    <input type="file" id="audioFileInput" accept="audio/*" style="display: none;">
+                    <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
                 </div>
                 <div class="progress-container">
                     <span class="time current" id="currentTime">0:00</span>
@@ -67,7 +65,7 @@
                     <span class="time total" id="durationTime">0:00</span>
                 </div>
             </div>
-            <audio id="audioPlayer" src="assets/music.mp3"></audio>
+            <audio id="audioPlayer"></audio>
         </div>
 
         <!-- Social Media Bento Boxes -->
