@@ -9,7 +9,7 @@ const currentTimeEl = document.getElementById('currentTime');
 const durationTimeEl = document.getElementById('durationTime');
 
 const playlist = [
-    { title: "Color Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" },
+    { title: "Color Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" }
 ];
 
 let currentSongIndex = 0;
@@ -24,7 +24,8 @@ function loadSong(index) {
 function playSong() {
     audioPlayer.play().then(() => {
         isPlaying = true;
-        playBtn.innerHTML = '⏸';
+        // الأيقونة ديال Pause
+        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
     }).catch(err => {
         console.log("Autoplay blocked or file missing", err);
     });
@@ -33,7 +34,8 @@ function playSong() {
 function pauseSong() {
     audioPlayer.pause();
     isPlaying = false;
-    playBtn.innerHTML = '▶';
+    // الأيقونة ديال Play
+    playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
 }
 
 playBtn.addEventListener('click', () => {
@@ -66,6 +68,7 @@ audioPlayer.addEventListener('timeupdate', () => {
 });
 
 audioPlayer.addEventListener('ended', () => {
+    // ملي تسالي الأغنية دوز للي موراها
     nextBtn.click();
 });
 
@@ -82,4 +85,5 @@ function formatTime(seconds) {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
+// تحميل الأغنية الأولى مع بداية الموقع
 loadSong(currentSongIndex);
