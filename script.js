@@ -8,11 +8,8 @@ const progressBar = document.getElementById('progressBar');
 const currentTimeEl = document.getElementById('currentTime');
 const durationTimeEl = document.getElementById('durationTime');
 
-// لائحة الأغاني الجاهزة من مجلد assets
 const playlist = [
-    { title: "Colore Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" },
-    // تقدر تزيد أغاني أخرين هنا بحال هكا:
-    // { title: "Track Name 2", src: "assets/song2.mp3" }
+    { title: "B.M.S", src: "https://files.catbox.moe/n3bdw2.mp3" },
 ];
 
 let currentSongIndex = 0;
@@ -27,7 +24,7 @@ function loadSong(index) {
 function playSong() {
     audioPlayer.play().then(() => {
         isPlaying = true;
-        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        playBtn.innerHTML = '⏸';
     }).catch(err => {
         console.log("Autoplay blocked or file missing", err);
     });
@@ -36,7 +33,7 @@ function playSong() {
 function pauseSong() {
     audioPlayer.pause();
     isPlaying = false;
-    playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+    playBtn.innerHTML = '▶';
 }
 
 playBtn.addEventListener('click', () => {
@@ -69,7 +66,7 @@ audioPlayer.addEventListener('timeupdate', () => {
 });
 
 audioPlayer.addEventListener('ended', () => {
-    nextBtn.click(); // مكيال دوز للأغنية الموالية أوتوماتيكياً
+    nextBtn.click();
 });
 
 progressBar.addEventListener('click', (e) => {
@@ -85,5 +82,4 @@ function formatTime(seconds) {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// تحميل الأغنية الأولى عند الدخول
 loadSong(currentSongIndex);
