@@ -3,88 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyxor. // Bento Grid Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nyxor. | Portfolio</title>
+    <meta name="description" content="Nyxor — coder and IT student. Links, socials and music in one place.">
+    <meta name="theme-color" content="#030712">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css?v=5.0">
 </head>
 <body>
-    <div class="bg-glow"></div>
-    
-    <div class="bento-container">
-        <!-- Profile Bento Box -->
-        <div class="bento-card profile-box">
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <main class="bento-container">
+        <!-- Profile -->
+        <section class="bento-card profile-box">
             <div class="avatar-wrapper">
-                <img src="assets/avatar.jpg" alt="Nyxor">
-                <div class="status-dot"></div>
+                <img src="assets/avatar.jpg" alt="Nyxor" width="90" height="90">
+                <div class="status-dot" aria-hidden="true"></div>
             </div>
             <h1>Nyxor.</h1>
-            <p class="role">&gt; coder · IT · Developpeur_</p>
+            <p class="role">&gt; coder · IT · Developer_</p>
             <div class="tags">
                 <span>Coder</span>
                 <span>IT student</span>
                 <span>Dev</span>
                 <span>20y</span>
             </div>
-        </div>
+        </section>
 
-        <!-- Bio / Quote Box -->
-        <div class="bento-card quote-box">
-            <i class="fa-solid fa-quote-left quote-icon"></i>
+        <!-- Quote -->
+        <section class="bento-card quote-box">
+            <i class="fa-solid fa-quote-left quote-icon" aria-hidden="true"></i>
             <p>I do not know if I will reach my dream, but I am moving forward, trusting in God_</p>
-        </div>
+        </section>
 
-        <!-- Secondary Link Box (@es.monaim_7 - Instagram) -->
-        <a href="https://instagram.com/es.monaim_7" target="_blank" class="bento-card link-box">
+        <!-- Instagram -->
+        <a href="https://instagram.com/es.monaim_7" target="_blank" rel="noopener noreferrer" class="bento-card link-box">
             <div class="link-avatar">
-                <img src="assets/avatar.jpg" alt="Instagram">
+                <img src="assets/avatar.jpg" alt="" width="48" height="48">
             </div>
             <div class="link-info">
                 <span class="handle">@es.monaim_7</span>
                 <span class="sub">Instagram</span>
             </div>
-            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <i class="fa-solid fa-arrow-right arrow-icon" aria-hidden="true"></i>
         </a>
 
-        <!-- Music Player Box with Playlist & Controls -->
-        <div class="bento-card music-box">
-            <div class="album-art" id="albumArtContainer">
-                <img src="assets/avatar.jpg" alt="Album Art">
+        <!-- Music player -->
+        <section class="bento-card music-box" aria-label="Music player">
+            <div class="album-art">
+                <img src="assets/avatar.jpg" alt="" width="60" height="60">
             </div>
             <div class="music-info">
-                <span class="song-title" id="songTitle">B.M.S</span>
+                <span class="song-title" id="songTitle">Color Caramelo</span>
                 <div class="player-controls">
-                    <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
-                    <button id="playBtn"><i class="fa-solid fa-play"></i></button>
-                    <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                    <button type="button" id="prevBtn" aria-label="Previous track"><i class="fa-solid fa-backward-step" aria-hidden="true"></i></button>
+                    <button type="button" id="playBtn" aria-label="Play"><i class="fa-solid fa-play" aria-hidden="true"></i></button>
+                    <button type="button" id="nextBtn" aria-label="Next track"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
                 </div>
                 <div class="progress-container">
                     <span class="time current" id="currentTime">0:00</span>
-                    <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar" id="progressBar" role="slider" tabindex="0"
+                         aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                         <div class="progress" id="progress"></div>
                     </div>
                     <span class="time total" id="durationTime">0:00</span>
                 </div>
             </div>
-            <audio id="audioPlayer"></audio>
-        </div>
+            <audio id="audioPlayer" preload="metadata"></audio>
+        </section>
 
-        <!-- Social Media Bento Boxes -->
-        <a href="https://www.tiktok.com/@es.ameur?_r=1&_t=ZS-9ANzSjdHnMc" target="_blank" class="bento-card social-box tiktok">
-            <i class="fa-brands fa-tiktok"></i>
+        <!-- Socials -->
+        <a href="https://www.tiktok.com/@es.ameur" target="_blank" rel="noopener noreferrer" class="bento-card social-box tiktok">
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
             <span>TikTok</span>
         </a>
-        <a href="https://www.snapchat.com/add/abdelmounaim_51?share_id=HnolGgWabs0&locale=en-US" target="_blank" class="bento-card social-box snapchat">
-            <i class="fa-brands fa-snapchat"></i>
+        <a href="https://www.snapchat.com/add/abdelmounaim_51" target="_blank" rel="noopener noreferrer" class="bento-card social-box snapchat">
+            <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
             <span>Snapchat</span>
         </a>
-        <a href="https://open.spotify.com/user/316nsxtnhcsiqg2rhbtes3xg7yk4?si=0DEsbl2AT4-R0yU2G4HWVw&utm_source=copy-link" target="_blank" class="bento-card social-box spotify">
-            <i class="fa-brands fa-spotify"></i>
+        <a href="https://open.spotify.com/user/316nsxtnhcsiqg2rhbtes3xg7yk4" target="_blank" rel="noopener noreferrer" class="bento-card social-box spotify">
+            <i class="fa-brands fa-spotify" aria-hidden="true"></i>
             <span>Spotify</span>
         </a>
-    </div>
+    </main>
 
     <footer class="footer">
-        <code>&lt;/&gt; coded by Nyxor (my self)</code>
+        <code>&lt;/&gt; coded by Nyxor (myself)</code>
     </footer>
 
     <script src="script.js"></script>
