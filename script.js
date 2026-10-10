@@ -9,7 +9,7 @@ const currentTimeEl = document.getElementById('currentTime');
 const durationTimeEl = document.getElementById('durationTime');
 
 const playlist = [
-    { title: "Color Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" }
+    { title: "Color Caramelo", src: "https://youtu.be/NRN-iS985Ow?si=NBPrcetntidFa_Qz" }
 ];
 
 let currentSongIndex = 0;
