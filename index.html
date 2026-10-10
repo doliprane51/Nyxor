@@ -1,245 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nyxor — Coder, IT student and developer focused on cybersecurity, Python and web development.">
-  <meta name="theme-color" content="#08100d">
-  <meta name="color-scheme" content="dark light">
-  <link rel="canonical" href="https://nyxor.dev/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nyxor — Coder · IT student · Developer">
-  <meta property="og:description" content="Personal portfolio and link hub for Nyxor.">
-  <meta property="og:url" content="https://nyxor.dev/">
-  <meta property="og:image" content="https://nyxor.dev/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nyxor — Coder · IT student · Developer">
-  <meta name="twitter:description" content="Personal portfolio and link hub for Nyxor.">
-  <meta name="twitter:image" content="https://nyxor.dev/og.png">
-  <meta name="robots" content="index,follow">
-  <title>Nyxor — Coder · IT student · Developer</title>
-  <link rel="stylesheet" href="/style.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Nyxor",
-    "email":"mailto:abdelmounaimameur52@gmail.com",
-    "url":"https://nyxor.dev/",
-    "sameAs":[
-      "https://github.com/doliprane51",
-      "https://www.tiktok.com/@es.ameur",
-      "https://www.snapchat.com/add/es.ameur",
-      "https://open.spotify.com/user/316nsxtnhcsiqg2rhbtes3xg7yk4",
-      "https://discordapp.com/users/1557767270250319902"
-    ],
-    "jobTitle":"Coder · IT student · Developer"
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyxor. // Bento Grid Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="boot-screen" id="bootScreen" aria-hidden="true"><span class="boot-mark">N</span><span class="boot-label">INITIALIZING / NYXOR</span></div>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="site-noise" aria-hidden="true"></div>
-  <div class="cursor-orb" aria-hidden="true"></div>
+    <div class="bg-glow"></div>
+    
+    <div class="bento-container">
+        <!-- Profile Bento Box -->
+        <div class="bento-card profile-box">
+            <div class="avatar-wrapper">
+                <img src="assets/avatar.jpg" alt="Nyxor">
+                <div class="status-dot"></div>
+            </div>
+            <h1>Nyxor.</h1>
+            <p class="role">&gt; coder · IT · Developpeur_</p>
+            <div class="tags">
+                <span>Coder</span>
+                <span>IT student</span>
+                <span>Dev</span>
+                <span>20y</span>
+            </div>
+        </div>
 
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Nyxor home">
-      <span class="brand-mark" aria-hidden="true">N</span>
-      <span>NYXOR<span class="brand-dot">.</span></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="topbar-actions">
-      <button class="icon-button" id="themeToggle" type="button" aria-label="Switch theme" title="Switch theme">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.2 8.2 0 0 1 8.8 3.8 8.2 8.2 0 1 0 20.2 15.2Z"/></svg>
-      </button>
-      <button class="command-trigger" id="commandOpen" type="button"><span>/</span> Command</button>
+        <!-- Bio / Quote Box -->
+        <div class="bento-card quote-box">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p>I do not know if I will reach my dream, but I am moving forward, trusting in God_</p>
+        </div>
+
+        <!-- Secondary Link Box (@es.monaim_7 - Instagram) -->
+        <a href="https://instagram.com/es.monaim_7" target="_blank" class="bento-card link-box">
+            <div class="link-avatar">
+                <img src="assets/avatar.jpg" alt="Instagram">
+            </div>
+            <div class="link-info">
+                <span class="handle">@es.monaim_7</span>
+                <span class="sub">Instagram</span>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+        </a>
+
+        <!-- Music Player Box with Playlist & Controls -->
+        <div class="bento-card music-box">
+            <div class="album-art" id="albumArtContainer">
+                <img src="assets/avatar.jpg" alt="Album Art">
+            </div>
+            <div class="music-info">
+                <span class="song-title" id="songTitle">B.M.S</span>
+                <div class="player-controls">
+                    <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="playBtn"><i class="fa-solid fa-play"></i></button>
+                    <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span class="time current" id="currentTime">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span class="time total" id="durationTime">0:00</span>
+                </div>
+            </div>
+            <audio id="audioPlayer"></audio>
+        </div>
+
+        <!-- Social Media Bento Boxes -->
+        <a href="https://www.tiktok.com/@es.ameur?_r=1&_t=ZS-9ANzSjdHnMc" target="_blank" class="bento-card social-box tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+        <a href="https://www.snapchat.com/add/abdelmounaim_51?share_id=HnolGgWabs0&locale=en-US" target="_blank" class="bento-card social-box snapchat">
+            <i class="fa-brands fa-snapchat"></i>
+            <span>Snapchat</span>
+        </a>
+        <a href="https://open.spotify.com/user/316nsxtnhcsiqg2rhbtes3xg7yk4?si=0DEsbl2AT4-R0yU2G4HWVw&utm_source=copy-link" target="_blank" class="bento-card social-box spotify">
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+        </a>
     </div>
-  </header>
 
-  <main id="main">
-    <section class="hero section-shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="signal"></span> Independent profile / IT &amp; security</p>
-          <h1 id="hero-title">NYXOR<span class="hero-punctuation">_</span></h1>
-          <p class="hero-role">Coder · IT student · Developer</p>
-          <p class="hero-lede">I build small, useful systems at the intersection of code, infrastructure and security — with curiosity first and clean execution close behind.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Contact me <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#projects">View projects <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
+    <footer class="footer">
+        <code>&lt;/&gt; coded by Nyxor (my self)</code>
+    </footer>
 
-        <aside class="hero-aside reveal" aria-label="Profile snapshot">
-          <div class="profile-frame">
-            <div class="profile-top">
-              <span>PROFILE / 001</span>
-              <span class="live-status"><span></span> AVAILABLE</span>
-            </div>
-            <div class="avatar-wrap">
-              <img src="/assets/avatar.webp" width="560" height="560" alt="Nyxor profile portrait" fetchpriority="high">
-              <div class="avatar-scan" aria-hidden="true"></div>
-              <div class="avatar-corner avatar-corner-a" aria-hidden="true"></div>
-              <div class="avatar-corner avatar-corner-b" aria-hidden="true"></div>
-            </div>
-            <div class="profile-meta">
-              <span>FR / EU</span>
-              <span>OPEN TO LEARNING</span>
-              <span>BUILDING 2026</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="hero-index reveal" aria-hidden="true">
-        <span>01 — INTRO</span>
-        <span class="index-line"></span>
-        <span>SCROLL TO EXPLORE</span>
-      </div>
-    </section>
-
-    <section class="section-shell social-section" aria-labelledby="social-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 / SIGNALS</p>
-        <h2 id="social-title">Find me in the wild.</h2>
-        <p>Selected places where I share code, music, experiments and everyday internet life.</p>
-      </div>
-      <div class="social-grid" id="socialGrid"></div>
-    </section>
-
-    <section class="section-shell split-section" id="about" aria-labelledby="about-title">
-      <div class="section-label reveal">
-        <p class="eyebrow">03 / PROFILE</p>
-        <span class="section-number">A—01</span>
-      </div>
-      <div class="about-content reveal">
-        <h2 id="about-title">Learning by <em>shipping.</em></h2>
-        <div class="about-columns">
-          <p>I’m an IT student developing practical skills across software, networking and cybersecurity. I like taking a problem apart, understanding the system underneath, then building a compact solution that actually works.</p>
-          <p>My current focus is strengthening fundamentals: Python, Linux, networking, web development and defensive security. Every project here is a small laboratory for the next one.</p>
-        </div>
-        <div class="metrics" id="metrics"></div>
-      </div>
-    </section>
-
-    <section class="section-shell skills-section" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / CAPABILITIES</p>
-        <h2 id="skills-title">A practical stack.</h2>
-      </div>
-      <div class="skills-grid" id="skillsGrid"></div>
-    </section>
-
-    <section class="section-shell projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading section-heading-wide reveal">
-        <div>
-          <p class="eyebrow">05 / SELECTED WORK</p>
-          <h2 id="projects-title">Small systems,<br><em>real constraints.</em></h2>
-        </div>
-        <p>Concept projects below are intentionally modest and replaceable. Swap them with your real work in <code>script.js</code>.</p>
-      </div>
-      <div class="project-grid" id="projectGrid"></div>
-    </section>
-
-    <section class="section-shell journey-section" id="journey" aria-labelledby="journey-title">
-      <div class="section-heading reveal">
-        <p class="eyebrow">06 / JOURNEY</p>
-        <h2 id="journey-title">Still under construction.</h2>
-      </div>
-      <div class="timeline" id="timeline"></div>
-    </section>
-
-    <section class="section-shell music-section" aria-labelledby="music-title">
-      <div class="music-intro reveal">
-        <p class="eyebrow">07 / LISTENING POST</p>
-        <h2 id="music-title">One track.<br><em>Zero autoplay.</em></h2>
-        <p>A quiet corner for whatever is currently in rotation.</p>
-      </div>
-      <div class="player reveal" id="player">
-        <audio id="audio" preload="metadata" src="/assets/music.mp3"></audio>
-        <div class="player-art" aria-hidden="true">
-          <span class="player-art-grid"></span>
-          <span class="player-art-mark">N</span>
-        </div>
-        <div class="player-main">
-          <div class="player-track">
-            <div>
-              <p class="track-kicker">LOCAL AUDIO / 01</p>
-              <h3 id="trackTitle">Nyxor — current rotation</h3>
-            </div>
-            <span id="playerState" class="player-state">READY</span>
-          </div>
-          <div class="progress-row">
-            <span id="currentTime">0:00</span>
-            <input id="progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Audio progress">
-            <span id="duration">0:00</span>
-          </div>
-          <div class="player-controls">
-            <button class="play-button" id="playToggle" type="button" aria-label="Play music">
-              <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19 12 8 5.2Z"/></svg>
-              <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg>
-            </button>
-            <button class="text-control" id="restartAudio" type="button">Restart</button>
-            <span class="player-hint">Space / Enter to play</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-shell contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-panel reveal">
-        <div>
-          <p class="eyebrow">08 / OPEN CHANNEL</p>
-          <h2 id="contact-title">Have a problem<br>worth <em>building?</em></h2>
-        </div>
-        <div class="contact-actions">
-          <a class="email-link" href="mailto:abdelmounaimameur52@gmail.com">abdelmounaimameur52@gmail.com</a>
-          <div class="contact-buttons">
-            <button class="button button-primary" id="copyEmail" type="button">Copy email <span aria-hidden="true">↗</span></button>
-            <a class="button button-quiet" href="mailto:abdelmounaimameur52@gmail.com">Send email</a>
-          </div>
-          <div class="contact-secondary" id="secondaryLinks"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer section-shell">
-    <span>NYXOR<span class="brand-dot">.</span> / PERSONAL SYSTEM</span>
-    <span>© <span id="year"></span> — Built with HTML, CSS &amp; JS</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <dialog class="command-palette" id="commandPalette" aria-labelledby="commandTitle">
-    <div class="command-box">
-      <div class="command-head">
-        <div>
-          <p class="eyebrow">COMMAND PALETTE</p>
-          <h2 id="commandTitle">Jump anywhere.</h2>
-        </div>
-        <button class="icon-button" id="commandClose" type="button" aria-label="Close command palette">×</button>
-      </div>
-      <label class="command-search">
-        <span aria-hidden="true">/</span>
-        <input id="commandInput" type="search" autocomplete="off" placeholder="Type a section or action…" aria-label="Search commands">
-        <kbd>ESC</kbd>
-      </label>
-      <div class="command-list" id="commandList"></div>
-      <p class="command-footer">↑ ↓ navigate · Enter select · Esc close</p>
-    </div>
-  </dialog>
-
-  <script src="/script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
