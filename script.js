@@ -10,13 +10,46 @@ const progressBar   = document.getElementById('progressBar');
 const currentTimeEl = document.getElementById('currentTime');
 const durationTimeEl = document.getElementById('durationTime');
 
-// Local file (served from the same origin, allowed by the CSP).
-// Add more tracks here: { title: "...", src: "assets/other.mp3" }
+// Add more tracks here. `src` = direct link to an audio file (.mp3).
+// `search` (optional) = song + artist, used to find the cover automatically.
+// `cover` (optional) = direct image link, overrides the automatic cover.
 const playlist = [
-    { title: "Color Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" },
+    { title: "Color Caramelo", search: "Color Caramelo Beny Jr El Guincho", src: "https://files.catbox.moe/n3bdw2.mp3" }
 ];
 
 let currentSongIndex = 0;
+
+// ---- Album cover (found automatically via the iTunes Search API) ----
+const albumArt = document.querySelector('.album-art img');
+const DEFAULT_COVER = 'assets/avatar.jpg';
+const coverCache = {};
+
+albumArt.addEventListener('error', () => {
+    if (!albumArt.src.endsWith(DEFAULT_COVER)) albumArt.src = DEFAULT_COVER;
+});
+
+async function fetchCover(query) {
+    if (coverCache[query]) return coverCache[query];
+    try {
+        const res = await fetch('https://itunes.apple.com/search?media=music&entity=song&limit=1&term=' + encodeURIComponent(query));
+        const data = await res.json();
+        const art = data.results && data.results[0] && data.results[0].artworkUrl100;
+        if (art) {
+            coverCache[query] = art.replace('100x100bb', '600x600bb');
+            return coverCache[query];
+        }
+    } catch (err) {
+        console.warn('Cover not found:', err);
+    }
+    return null;
+}
+
+async function loadCover(song, index) {
+    albumArt.src = song.cover || DEFAULT_COVER;
+    if (song.cover) return;
+    const url = await fetchCover(song.search || song.title);
+    if (url && index === currentSongIndex) albumArt.src = url;
+}
 
 function formatTime(seconds) {
     if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -42,6 +75,7 @@ function loadSong(index) {
     audioPlayer.src = song.src;
     songTitle.textContent = song.title;
     resetProgress();
+    loadCover(song, index);
 }
 
 function playSong() {
