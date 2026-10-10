@@ -13,7 +13,7 @@ const durationTimeEl = document.getElementById('durationTime');
 // Local file (served from the same origin, allowed by the CSP).
 // Add more tracks here: { title: "...", src: "assets/other.mp3" }
 const playlist = [
-    { title: 'Color Caramelo', src: 'https://files.catbox.moe/n3bdw2.mp3' }
+    { title: "Color Caramelo", src: "https://files.catbox.moe/n3bdw2.mp3" },
 ];
 
 let currentSongIndex = 0;
