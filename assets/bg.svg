@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#02040f"/>
+      <stop offset="0.45" stop-color="#050b2a"/>
+      <stop offset="0.62" stop-color="#0a1a5c"/>
+      <stop offset="1" stop-color="#030717"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1f6e"/>
+      <stop offset="0.35" stop-color="#06133f"/>
+      <stop offset="1" stop-color="#02050f"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9ec5ff" stop-opacity="0.55"/>
+      <stop offset="0.35" stop-color="#3b6fe0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#1d3fb0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moonFace" cx="0.4" cy="0.38" r="0.7">
+      <stop offset="0" stop-color="#f4f8ff"/>
+      <stop offset="0.7" stop-color="#bcd3ff"/>
+      <stop offset="1" stop-color="#7fa3ec"/>
+    </radialGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9ec5ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#cfe0ff" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#9ec5ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="1.5"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#cfe0ff">
+    <circle cx="120" cy="90" r="1.4"/><circle cx="260" cy="170" r="1"/><circle cx="410" cy="60" r="1.6"/>
+    <circle cx="520" cy="210" r="1"/><circle cx="640" cy="110" r="1.3"/><circle cx="760" cy="40" r="1"/>
+    <circle cx="830" cy="190" r="1.5"/><circle cx="930" cy="80" r="1"/><circle cx="1040" cy="150" r="1.2"/>
+    <circle cx="1330" cy="70" r="1.4"/><circle cx="1450" cy="200" r="1"/><circle cx="1540" cy="110" r="1.5"/>
+    <circle cx="180" cy="300" r="1"/><circle cx="350" cy="340" r="1.3"/><circle cx="700" cy="290" r="1"/>
+    <circle cx="1230" cy="290" r="1.1"/><circle cx="1510" cy="330" r="1"/><circle cx="60" cy="210" r="1.2"/>
+  </g>
+
+  <!-- clouds -->
+  <g fill="#0f2a8a" opacity="0.35" filter="url(#blur6)">
+    <ellipse cx="300" cy="330" rx="260" ry="26"/>
+    <ellipse cx="760" cy="260" rx="300" ry="22"/>
+    <ellipse cx="1300" cy="380" rx="330" ry="28"/>
+    <ellipse cx="1080" cy="470" rx="380" ry="24"/>
+  </g>
+
+  <!-- moon -->
+  <circle cx="1130" cy="230" r="230" fill="url(#moonGlow)"/>
+  <circle cx="1130" cy="230" r="78" fill="url(#moonFace)"/>
+  <g fill="#7fa3ec" opacity="0.45">
+    <circle cx="1105" cy="212" r="14"/><circle cx="1150" cy="255" r="18"/><circle cx="1158" cy="200" r="9"/><circle cx="1112" cy="262" r="8"/>
+  </g>
+
+  <!-- far mountain (Fuji style) -->
+  <path d="M-20 640 L240 590 L520 610 L780 540 L930 470 L1010 392 L1060 380 L1110 392 L1190 470 L1340 545 L1600 600 L1620 660 L-20 660 Z" fill="#0a1a62"/>
+  <path d="M960 430 L1010 392 L1060 380 L1110 392 L1160 440 L1120 430 L1090 450 L1060 428 L1030 452 L1000 428 Z" fill="#6f95ea" opacity="0.5"/>
+  <!-- near hills -->
+  <path d="M-20 660 L200 620 L420 650 L640 630 L900 660 L1200 635 L1420 655 L1620 625 L1620 700 L-20 700 Z" fill="#050f3d"/>
+
+  <!-- lake -->
+  <rect x="0" y="660" width="1600" height="340" fill="url(#lake)"/>
+
+  <!-- moon reflection -->
+  <g filter="url(#blur2)">
+    <rect x="1050" y="690" width="160" height="5" fill="url(#streak)"/>
+    <rect x="1070" y="715" width="120" height="4" fill="url(#streak)"/>
+    <rect x="1040" y="745" width="180" height="5" fill="url(#streak)"/>
+    <rect x="1080" y="780" width="100" height="4" fill="url(#streak)"/>
+    <rect x="1030" y="815" width="200" height="5" fill="url(#streak)"/>
+    <rect x="1075" y="860" width="110" height="4" fill="url(#streak)"/>
+    <rect x="1050" y="910" width="160" height="4" fill="url(#streak)" opacity="0.6"/>
+  </g>
+  <ellipse cx="1130" cy="760" rx="120" ry="90" fill="#3b6fe0" opacity="0.1" filter="url(#blur6)"/>
+  <!-- ripples -->
+  <g stroke="#2f55c8" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+    <path d="M100 720 q40 -6 80 0"/><path d="M300 770 q60 -8 120 0"/><path d="M520 705 q40 -5 80 0"/>
+    <path d="M700 830 q70 -9 140 0"/><path d="M240 900 q60 -8 120 0"/><path d="M1350 740 q50 -7 100 0"/>
+    <path d="M1400 850 q70 -9 140 0"/><path d="M560 940 q60 -8 120 0"/>
+  </g>
+
+  <!-- torii (right, on the shore) -->
+  <g fill="#020822">
+    <rect x="1405" y="630" width="9" height="46"/><rect x="1457" y="630" width="9" height="46"/>
+    <rect x="1392" y="622" width="87" height="7" rx="2"/><rect x="1398" y="636" width="75" height="4"/>
+  </g>
+  <g fill="#ffb25a" opacity="0.7"><rect x="1500" y="650" width="5" height="6"/><rect x="1512" y="652" width="4" height="5"/></g>
+
+  <!-- pine trees left -->
+  <g fill="#01040f">
+    <path d="M0 0 L190 0 Q160 80 130 130 Q150 150 100 210 Q130 230 70 300 Q90 320 40 400 L0 400 Z"/>
+    <path d="M0 400 L60 430 Q40 520 90 560 Q50 600 100 680 L0 700 Z"/>
+    <path d="M0 640 L140 700 L90 720 L190 800 L100 810 L220 900 L0 1000 Z"/>
+  </g>
+  <!-- pine trees right -->
+  <g fill="#01040f">
+    <path d="M1600 120 L1520 140 Q1550 190 1490 230 Q1530 260 1470 320 Q1520 340 1450 420 L1600 460 Z"/>
+    <path d="M1600 640 L1500 700 L1550 720 L1450 800 L1530 815 L1420 920 L1600 1000 Z"/>
+  </g>
+  <!-- rocks bottom -->
+  <path d="M-10 1000 L-10 940 Q120 900 260 950 Q380 920 520 975 L560 1000 Z" fill="#01030c"/>
+  <path d="M1000 1000 Q1120 950 1250 975 Q1380 940 1610 970 L1610 1000 Z" fill="#01030c"/>
+
+  <!-- vignette -->
+  <rect width="1600" height="1000" fill="#000" opacity="0.12"/>
+</svg>
